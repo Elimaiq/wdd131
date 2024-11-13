@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Color scheme:
+background-color: #ffffff (white)
+header/footer color: #3b82f6 (soft blue)
+navigation color: #1e3a8a (dark blue)
+right-sidebar color: #b5cbf0 (light blue tint)
+text-color: #111827 (dark gray)
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    height: 100vh;
+    color: #111827;
+    font-family: 'Open Sans', sans-serif;
+    grid-template: auto 1fr auto / 70% 30%; /*creates 3 rowa and 2 columns*/
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sour Gummy', 'Arial', sans-serif;
+}
+
+header {
+    background: #3b82f6;
+    grid-column: 1 / 3;
+}
+header h1 {
+    color:#111827;
+    padding: 1.5rem 1rem; /*Add padding to top/bottom and sides*/
+    margin: 0;
+}
+
+main {
+    background: #ffffff;
+    grid-column: 1 / 2;
+    padding: 1rem; /*add padding to keep content away from edges*/
+}
+
+.right-sidebar {
+    background: #b5cbf0;
+    padding: 1rem;
+    grid-column: 2 / 3;
+}
+
+footer {
+    background: #3b82f6;
+    padding: 2rem;
+    text-align: center;
+    grid-column: 1 / 3;
+}
+
+.navigation ul {
+    display: flex;
+    background-color: #1e3a8a;
+    border-color: #1e3a8a;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+.navigation li {
+    list-style: none; /*Removes default bullet point fron nav list*/
+    flex: 1 1 auto; /*Nav items will shrink and grow depending on content size*/
+}
+.navigation a {
+    display: block; /*makes every are of the navigation clickable*/
+    color: #ffffff;
+    padding: 0.75rem;
+    text-decoration: none; /*Removed default underline*/
+    text-align: center;
+}
+.navigation a:hover {
+    font-weight: 700;
+    color: #1e3a8a;
+    background-color: #b5cbf0;
+    border: 0.2px solid #1e3a8a; /* adds borderline on hover*/
+    border-radius: 5px; /* adds rounded edges */
+}
