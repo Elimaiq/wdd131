@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Comfort Elima Ogar</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals by Comfort Elima Ogar. 
+        Home page including links to my LinkedIn profile, scriptures, course final project, and info about me.">
+    <meta name="author" content="Comfort Elima Ogar">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD 131 - Comfort Elima Ogar</h1>
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - <span class="name">Comfort Elima Ogar</span></h1>
+        <nav class="navigation">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/comfort-elima-ogar/">LinkedIn</a></li>
+                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/isa/41?lang=eng&id=10#p10">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="card card1">
+            <h2 class="cardheader">About Me</h2>
+            <div class="about-me">
+                <p>Hello! I’m Comfort Ogar from Lagos, Nigeria. I’m currently pursuing a degree in software development at BYU-Idaho. 
+                    Alongside my studies, I work as a freelancer specializing in e-commerce management, virtual assistance, 
+                    and graphic design. I enjoy creating visually appealing designs and efficiently managing online platforms, 
+                    and I’m always eager to bring value to new projects. I’m open to exciting work opportunities where I 
+                    can contribute my skills and grow professionally.</p>
+                <img src="images/my-photo.jpg" alt="My Photo" />
+            </div>
+
+            <h2>Federal Republic of Nigeria</h2>
+            <hr>
+            <div class="country">
+                <img src="images/nigerian-flag.png" alt="Nigerian Flag" title="Official flag of Nigeria" />
+                <p>Nigeria, often referred to as the "Giant of Africa," is a country celebrated for its vibrant culture, 
+                    diverse population, and economic potential. Located in West Africa, it is the most populous country on the 
+                    continent, home to over 200 million people from more than 250 ethnic groups.
+
+                    As Africa's largest economy, Nigeria is a powerhouse in industries like oil and gas, technology, and agriculture.
+                     Its entrepreneurial spirit is evident in the rapid growth of its tech hubs, earning Lagos the nickname 
+                     "Silicon Valley of Africa."
+
+                </p>
+            </div>
+        </section>
+
+        <section class="card card2">
+            <h2 class="cardheader">My Learning Resources</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Learn HTML</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS Styling Guide</a></li>
+                <li><a href="https://www.w3schools.com/">Web Dev Tutorials</a></li>
+                <li><a href="https://www.codecademy.com/">Learn to Code</a></li>
+                <li><a href="https://www.freecodecamp.org/">Coding Bootcamp</a></li>
+            </ul>  
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy;<span id="currentyear"></span>
+            <i class="fa fa-star"></i> Comfort Elima Ogar <i class="fa fa-star"></i> Nigeria
+        </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

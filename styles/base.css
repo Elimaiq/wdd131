@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Color scheme:
+background-color: #ffffff (white)
+header/footer color: #3b82f6 (soft blue)
+navigation color: #1e3a8a (dark blue)
+right-sidebar color: #b5cbf0 (light blue tint)
+text-color: #111827 (dark gray)
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    height: 100vh;
+    color: #111827;
+    background-color: #f3f4f6;
+    font-family: 'Open Sans', sans-serif;
+    grid-template-rows: auto 1fr auto;
+    /*creates 3 rows*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Sour Gummy', 'Arial', sans-serif;
+}
+
+header {
+    background: #3b82f6;
+    grid-column: 1 / 3;
+}
+
+header h1 {
+    color: #111827;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    /*Add padding to top/bottom and sides*/
+    margin: 0;
+}
+.name {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+main {
+    grid-column: 1 / 3;
+    display: grid;
+    /*Creates a nested grid inside main for card 1 & 2*/
+    grid-template-columns: 2.5fr 1fr;
+    /*Sets the column template for card 1 & 2*/
+    gap: 1rem;
+    padding: 1rem;
+    /*add padding to keep content away from edges*/
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #1e3a8a;
+    overflow: hidden;
+    /* Keep border-radius while allowing header to extend to edges */
+}
+
+.card1 {
+    background: #ffffff;
+    grid-column: 1 / 2;
+}
+
+.card2 {
+    background: #b5cbf0;
+    grid-column: 2 / 3;
+}
+.card2 ul {
+    list-style: none;
+    padding: 0.5rem;
+}
+.card2 a {
+    display: block;
+    text-decoration: none;
+    padding: 0.75rem;
+    color: #1e3a8a;
+    font-weight: 700;
+    border-radius: 0.3rem;
+}
+.card2 a:hover {
+    background-color: #1e3a8a;
+    color: #ffffff;
+}
+/*Make side navigation responsive*/
+@media (max-width: 650px) {
+    main {
+        grid-template: auto auto / auto;
+    }
+    .card1, .card2 {
+        grid-column: 1 / 2; /* Place card2 below card1 */
+        width: 100%;
+    }
+    .card2 ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .card2 ul li {
+        margin: 0;
+    }
+}
+
+/*Card heading background color*/
+.cardheader {
+    background-color: #3b82f6;
+    margin: -1rem -1rem 1rem -1rem;
+    /* negative margin to override the card padding */
+    padding: 1rem;
+    text-align: center;
+}
+.card h2:nth-of-type(2) {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 3.5rem;
+}
+
+/*Setting the grid for the about me and country*/
+.about-me,
+.country {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+.about-me p,
+.country p {
+    flex: 2.5;
+    margin: 0;
+}
+.about-me img,
+.country img {
+    flex: 1;
+    max-width: 12rem;
+    height: auto;
+    object-fit: contain;
+}
+.country {
+    margin-top: 1rem;
+}
+img {
+    border: 1px double #ccc;
+    border-radius: 8px;
+}
+/*Responsive design for the images and paragraph*/
+@media (max-width: 768px) {
+    .about-me, .country {
+        flex-direction: column;
+    }
+    .about-me img, .country img {
+        width: 100%;
+    }
+}
+
+footer {
+    background: #3b82f6;
+    padding: 2rem;
+    text-align: center;
+    grid-column: 1 / 3;
+    font-weight: bold;
+}
+#lastModified {
+    font-size: 0.8rem;
+    color: #ffffff; 
+}
+
+/*Styling the navigation*/
+.navigation ul {
+    display: flex;
+    background-color: #1e3a8a;
+    border-color: #1e3a8a;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    list-style: none;
+    /*Removes default bullet point fron nav list*/
+    flex: 1 1 auto;
+    /*Nav items will shrink and grow depending on content size*/
+}
+
+.navigation a {
+    display: block;
+    /*makes every area of the navigation clickable*/
+    color: #ffffff;
+    padding: 0.75rem;
+    text-decoration: none;
+    /*Removed default underline*/
+    text-align: center;
+    border: 0.2px solid #1e3a8a;
+    border-radius: 5px;
+}
+
+.navigation a:hover {
+    font-weight: 700;
+    color: #1e3a8a;
+    background-color: #b5cbf0;
+}
